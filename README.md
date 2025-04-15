@@ -1,6 +1,6 @@
 # databricks-test
 
-
+```
 from datetime import datetime, timedelta
 from pyspark.sql.functions import col, concat, lit
 import requests
@@ -16,3 +16,4 @@ df = spark.createDataFrame(data)
 #df.cache()
 df = df.withColumn("image", concat(lit('<img src="'), col("url"), lit('" width="100"/>')))
 display(df.select(col("date"), col("title"), col("image")))
+```
